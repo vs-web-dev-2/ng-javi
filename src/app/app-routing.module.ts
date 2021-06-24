@@ -17,6 +17,7 @@ const routes: Routes = [
     path: 'not-found',
     component: NotFoundComponent,
   },
+  { path: 'divisas', loadChildren: () => import('./divisas/divisas.module').then(m => m.DivisasModule) },
   {
     path: '**',
     redirectTo: 'not-found',
